@@ -1,0 +1,329 @@
+body,p,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,td,input,select,textarea,figure{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family:"微软雅黑",Arial;
+	background: #ebebeb;
+}
+a{
+	text-decoration:none;
+}
+ul,li{
+	list-style:none;
+}
+img{
+	border:none;
+}
+/*header*/
+header{
+	width: 100%;
+	height: 710px;
+	background-color: #92c0fe;
+}
+.datu{
+	width: 1200px;
+	height: 710px;
+	margin:0 auto;
+	position: relative;
+}
+.datu .logo{
+	width: 98px;
+	height: 98px;
+	position: absolute;
+	left: 243px;
+	top: 0px;
+}
+.datu .innerBox{
+	width: 360px;
+	height: 515px;
+	position: absolute;
+	top: 74px;
+	right: 0px;
+	background-color: white;
+	padding:30px 30px 20px;
+}
+.datu .innerBox .logoArea{
+	width: 150px;
+	height: 42px;
+/*	background-color: pink;*/
+	margin:auto;
+}
+.datu .innerBox .logoArea img{
+	width: 100%;
+	height: 100%;
+}
+
+.datu .innerBox .title{
+	text-align: center;
+	margin-top: 15px;
+	font-size: 19px;
+}
+.datu .innerBox .input-area .phone-box{
+	width: 360px;
+	height: 48px;
+	border:1px solid #dedfe0;
+	/*background-color: pink;*/
+	margin-top: 23px;
+}
+
+.datu .innerBox .input-area .phone-box .countrylistbox{
+	width: 360px;
+    border: 1px solid #dedfe0;
+    background-color: #fff;
+    z-index: 3;
+    position: absolute;
+    top: 48px;
+    left: -1px;
+    display: none;
+}
+.datu .innerBox .input-area .phone-box .countrylistbox ul .li11{
+	height: 40px;
+	font-size: 14px;
+	border-bottom: 1px solid #dedfe0;
+	line-height: 39px;
+}
+.datu .innerBox .input-area .phone-box .countrylistbox ul .li11 span:first-child{
+	float: left;
+	margin-left: 18px;
+}
+
+.datu .innerBox .input-area .phone-box .countrylistbox ul .li11 span:last-child{
+	float: right;
+	margin-right: 18px;
+}
+.datu .innerBox .input-area .phone-box .countrylistbox ul .li22{
+	height: 40px;
+	font-size: 14px;
+
+	line-height: 39px;
+}
+.datu .innerBox .input-area .phone-box .countrylistbox ul .li22 span:first-child{
+	float: left;
+	margin-left: 18px;
+}
+
+.datu .innerBox .input-area .phone-box .countrylistbox ul .li22 span:last-child{
+	float: right;
+	margin-right: 18px;
+}
+
+
+
+
+
+
+
+
+.datu .innerBox .input-area .email-box{
+	width: 360px;
+	height: 48px;
+	border:1px solid #dedfe0;
+	margin-top: 23px;
+	display: none;
+}
+
+.datu .innerBox .input-area .email-box .inputtwo{
+	float: left;
+	width: 254px;
+	height:48px;
+	padding-left: 12px;
+	border:none;
+	font-size: 16px;
+    color: #000;
+    outline: 0;
+}
+.datu .innerBox .input-area .phone-box .phone-code{
+	width: 74px;
+	height: 48px;
+	/*background-color: gray;*/
+	position: relative;
+	float: left;
+
+}
+.datu .innerBox .input-area .phone-box .phone-code .sp1{
+	width: 62px;
+	height: 48px;
+	padding-left: 12px;
+	font-size: 16px;
+	color: #000;
+	line-height: 48px;
+}
+.datu .innerBox .input-area .phone-box .phone-code img{
+	width: 14px;
+	height: 9px;
+	position: absolute;
+	top: 21px;
+	left: 61px;
+}
+.datu .innerBox .input-area .input{
+	float: left;
+	width: 254px;
+	height:48px;
+	padding-left: 20px;
+	border:none;
+	font-size: 16px;
+    color: #000;
+    outline: 0;
+}
+.datu .innerBox .input-area .pwd-box{
+	width: 358px;
+	height: 46px;
+	background-color: red;
+	margin-top: 15px;
+	border:1px solid #dedfe0;
+	position: relative;
+	/*display: none;*/
+
+}
+
+
+.datu .innerBox .input-area .pwd-box .eye-box{
+	width:21px;
+	height: 18px;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	/*background-color: red;*/
+}
+
+
+.datu .innerBox .input-area .pwd-box .eye-box .eye1{
+	width: 	100%;
+	height: 100%;
+
+}
+.datu .innerBox .input-area .pwd-box .eye-box .eye2{
+	width: 	100%;
+	height: 100%;
+	display: none;	
+}
+.datu .innerBox .input-area .pwd-box input{
+	width: 298px;
+	height: 46px;
+	padding: 0 48px 0 12px;
+	/*background-color: blue;*/
+	font-size: 16px;
+	outline: 0;
+	border:none;
+
+}
+.datu .innerBox .check-box{
+	width: 360px;
+	height: 19px;
+	margin-top: 19px;
+	font-size: 14px;
+}
+.datu .innerBox .check-box .toggle{
+	font-size: 14px;
+	line-height: 19px;
+	color: #009bfd;
+	float: left;
+	display: none;
+}
+.datu .innerBox .check-box .toggletwo{
+	font-size: 14px;
+	line-height: 19px;
+	color: #009bfd;
+	float: left;
+	display: none;
+}
+.datu .innerBox .check-box .auto-login{
+	width: 121px;
+	height: 19px;
+	float: right;
+	color: #666;
+	line-height: 19px;
+	/*display: flex;*/
+}
+.datu .innerBox .check-box .auto-login .check{
+	width:16px;
+	height: 16px;
+	/*background-color: red;*/
+	border:1px solid #dedfe0;
+	float: left;
+	margin-right: 5px;
+}
+
+.datu .innerBox .check-box .auto-login .check #dimg{
+	width: 12px;
+	height: 12px;
+	padding:2px;
+
+}
+.datu .innerBox .check-box .auto-login span{
+	/*width:100px; */
+	font-size:14px;
+	line-height: 19px;
+	/*display: block;*/
+	float: left;
+}
+
+.datu .innerBox .logo-button{
+	width: 360px;
+	height: 48px;
+	background-color: #46a1fa;
+	margin-top: 20px;
+	line-height: 48px;
+	font-size: 17px;
+	color: #fff;
+	text-align: center;
+}
+.datu .innerBox .register-button{
+	width: 360px;
+	height: 48px;
+	margin-top: 20px;
+	line-height: 48px;
+	font-size: 15px;
+	color:#0091ff;
+	text-align: center;
+	border: 1px solid #0090ff;
+}
+.datu .innerBox .forget-pwd{
+	font-size: 14px;
+	color: #666;
+	margin-top: 20px;
+	text-align: center;
+}
+
+
+
+
+
+.foot{
+	width: 100%;
+	margin-top: 135px;
+    margin-bottom: 30px;
+}
+.foot .service{
+	height: 16px;
+	font-size: 11px;
+	text-align: center;
+	line-height: 16px;
+}
+.foot .footone img{
+	width: 16px;
+	height: 14px;
+	vertical-align:middle;
+}
+.foot .footone span{
+	line-height: 16px;
+	font-size: 11px;
+	margin-right: 40px;
+	color: #666;
+}
+.foot .foottwo img{
+	width: 12px;
+	height: 15px;
+	vertical-align:middle;
+}
+
+.foot .foottwo span{
+	color: #666;
+}
+.foot .copyright{
+	font-size: 10px;
+	padding: 10px 0;
+	text-align: center;
+	color: #9d9d9d;
+}

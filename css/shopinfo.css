@@ -1,0 +1,123 @@
+body,p,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,td,th,input,select,textarea,figure{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family:"微软雅黑",Arial;
+	background: #ebebeb;
+}
+a{
+	text-decoration:none;
+}
+li{
+	list-style:none;
+}
+img{
+	border:none;
+}
+td th{
+	display: table-cell;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+header{
+	width: 100%;
+	background-color: #2f2f2f;
+}
+header .head{
+	width: 1200px;
+	height:44px;
+	margin:auto;
+}
+header .head .nav{
+	width: 848px;
+	height: 100%;
+	margin:auto;
+}
+header .head .nav li{
+	height: 44px;
+	float: left;
+}
+header .head .nav li a{
+	color:#eeeeee;
+	line-height: 44px;
+	font-size: 14px;
+	padding:0 22px;
+	display: block;
+}
+
+
+
+.wrapper{
+	width: 1200px;
+	height: 72px;
+	/*background-color: red;*/
+	margin:0  auto;
+}
+
+.prod .prodleft{
+	float: left;
+}
+.prod .img1{
+	width: 515px;
+	height: 515px;
+}
+.prod .prodright{
+	float: left;
+    margin-top: 11px;
+}
+.prod .prodright h1{
+	color: #000;
+	font-size: 34px;
+	line-height: 1;
+	font-weight: 400;
+}
+.prod .prodright .prod-summary{
+	width: 508px;
+	height: 109px;
+	/*background-color: red;*/
+	padding: 40px 0 37px;
+	margin-top: 36px;
+    margin-bottom: 15px;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+}
+.prod .prodright .prod-summary .price{
+	width: 166px;
+	vertical-align: middle;
+}
+
+.prod .prodright .prod-summary .price .now-price{
+	color: #f51200;
+	font-size: 40px;
+	display: block;
+}
+.prod .prodright .button1{
+	width: 170px;
+	height: 46px;
+    border-radius: 20px;
+    background-color: #ff9536;
+    font-size: 18px;
+    color: #fff;
+    margin-right: 27px;
+}
+.prod .prodright .button2{
+	width: 170px;
+	height: 46px;
+    border-radius: 20px;
+    background-color: #f51200;
+    font-size: 18px;
+    color: #fff;
+
+}

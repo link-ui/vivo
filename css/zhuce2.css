@@ -1,0 +1,162 @@
+body,p,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,td,input,select,textarea,figure{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family:"微软雅黑",Arial;
+	background: #ebebeb;
+	background-color: #f7f7f7;
+}
+a{
+	text-decoration:none;
+}
+li{
+	list-style:none;
+}
+img{
+	border:none;
+}
+/*section*/
+.section{
+	width: 860px;
+	height: 670px;
+	background-color: #ffffff;
+	margin: 0 auto;
+	margin-top: 80px;
+	padding-top: 60px;
+}
+.logoArea{
+	width: 150px;
+	height: 42px;
+	margin:0 auto;
+}
+.logoArea img{
+	width: 100%;
+	height: 100%;
+}
+.section .title{
+	width: 100%;
+	height:29px;
+	font-size: 22px;
+	line-height: 29px;
+	text-align: center;
+	margin-top: 30px;
+	/*background-color: blue;*/
+}
+.section .innerBox{
+	width: 360px;
+	height: 288px;
+	margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    /*background-color: red;*/
+}
+.section .innerBox .hint1{
+	width: 360px;
+	height: 20px;
+	font-size: 15px;
+	color: #252525;
+	line-height: 20px;
+}
+.section .innerBox .code-box{
+	height: 46px;
+	/*background-color: red;*/
+	border:1px solid #dedfe0;
+	margin-top: 10px;
+}
+.section .innerBox .code-box .input1{
+	width: 216px;
+	height: 46px;
+	line-height: 46px;
+	font-size: 16px;
+	color: #252525;
+	border:none;
+	padding-left: 12px;
+	outline: 0;
+}
+
+.section .innerBox .code-box .getcode{
+	width: 128px;
+	float: right;
+	font-size: 15px;
+	text-align: center;
+	line-height: 46px;
+	color: #0988f0;
+}
+.section .innerBox .pwd-box{
+	width: 346px;
+	height: 46px;
+	/*background-color: red;*/
+	margin-top: 14px;
+	border: 1px solid #dedfe0;
+	padding-left: 12px;
+}
+.section .innerBox .pwd-box input{
+	width: 340px;
+	height: 46px;
+	line-height: 46px;
+	font-size: 16px;
+	color: #252525;
+	border:none;
+	outline: 0;
+}
+.section .innerBox .hint2{
+	width: 360px;
+	height: 19px;
+	font-size: 14px;
+	color: #999;
+	line-height: 19px;
+	margin-top: 10px;
+}
+.section .innerBox .button{
+	width: 100%;
+	height: 48px;
+	background-color: #46a1fa;
+	color:17px;
+	font-size:#fff; 
+	background-image: linear-gradient(90deg,#46a1fa,#067df8);
+	border:none;
+	margin-top: 15px;
+}
+
+
+
+
+
+.foot{
+	width: 100%;
+	margin-top: 135px;
+    margin-bottom: 30px;
+}
+.foot .service{
+	height: 16px;
+	font-size: 11px;
+	text-align: center;
+	line-height: 16px;
+}
+.foot .footone img{
+	width: 16px;
+	height: 14px;
+	vertical-align:middle;
+}
+.foot .footone span{
+	line-height: 16px;
+	font-size: 11px;
+	margin-right: 40px;
+	color: #666;
+}
+.foot .foottwo img{
+	width: 12px;
+	height: 15px;
+	vertical-align:middle;
+}
+
+.foot .foottwo span{
+	color: #666;
+}
+.foot .copyright{
+	font-size: 10px;
+	padding: 10px 0;
+	text-align: center;
+	color: #9d9d9d;
+}
