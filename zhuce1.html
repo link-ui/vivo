@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>注册</title>
+<link rel="stylesheet" type="text/css" href="css/zhuce.css">
+</head>
+<body>
+	<div class="section">
+		<div class="logoArea">
+			<img src="img/logo4.png.webp" alt="">
+		</div>
+		<div class="title">账号注册</div>
+		<div class="innerBox">
+			<div class="countryBox">
+				<div class="showCountry">中国
+					<div class="arrow">
+						<img src="img/arrow1.png" alt="">
+					</div>
+				</div>
+				<div class="countryList">
+					<ul>
+						<li>中国</li>
+						<li>中国香港</li>
+						<li>中国台湾</li>
+						<li>Andorra</li>
+						<li>Andorra</li>
+					</ul>
+				</div>
+			</div>
+			<div class="hint">成功注册帐号后，国家／地区将不能被修改</div>
+			<div class="phoneBox">
+				<form action="zhuce2.html" method="get">
+							<div class="phoneCode">
+							<div class="showCode">+86 <div class="arrowone"><img src="img/arrow2.png" alt=""></div></div>
+							<div class="codelist"></div>
+						</div>
+						<input type="text" name="tel" placeholder="请输入手机号" id="phone" class="input">
+						<input type="text"  placeholder="请输入密码" id="pass">		
+					</div>
+					<div class="protocolBox">
+						<div class="checkBox"><img id="imgarrow" src="img/arrow3.png.webp" alt=""></div>
+						<span>我已阅读并接受</span>
+						<a href="">《vivo服务协议》</a>
+					</div>
+					<input type="submit" name=""  class="button" value="下一步">
+				</form>
+				
+			<!-- <button class="button">下一步</button> -->
+		</div>
+	</div>
+	<div class="foot">
+		<div class="service">
+			<a href="" class="footone"><img src="img/yuyin.png" alt=""><span>在线客服</span></a>
+			<a href="" class="foottwo"><img src="img/dianhua.png.webp" alt=""><span>400-678-9688(24小时全国服务热线)</span></a>
+		</div>
+		<div class="copyright">    COPYRIGHT ©2011-2018 广东步步高电子工业有限公司 版权所有 保留一切权利 | 隐私政策 | 法律声明 | 粤B2-20080267 | 粤ICP备05100288号
+</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	
+function $(str){//#box .cls  p
+	if(str.charAt(0)=="#"){
+		return document.getElementById(str.substring(1));
+	}else if(str.charAt(0)=="."){
+		return document.getElementsByClassName(str.substring(1));
+	}else{
+		return document.getElementsByTagName(str);
+	}
+}
+
+window.onload=function(){
+	$(".arrow")[0].onclick = function(){
+		// console.log("1");
+		if($(".countryList")[0].style.display=="block"){
+			$(".countryList")[0].style.display="none";
+		}else{
+			$(".countryList")[0].style.display="block";
+		}	
+	}
+
+
+	$(".checkBox")[0].onclick = function(){
+		// console.log("1");
+		if($("#imgarrow").style.display=="block"){
+			$("#imgarrow").style.display="none";
+		}else{
+			$("#imgarrow").style.display="block";
+		}	
+	}
+
+
+
+	 $(".button")[0].onclick = function(){
+
+	 	location.href="zhuce2.html";
+	 }
+
+// $(".button")[0].onclick = function(){
+
+
+// 		if($("#phone").value == ""){
+// 			alert("请输入用户名或密码");
+// 			return;
+// 		}
+// 		//1、创建对象
+// 		let xhr = new XMLHttpRequest();
+		
+// 		//2、设置请求参数
+// 		xhr.open('post','regSave.php',true);
+
+// 		//3、设置回调函数
+// 		xhr.onreadystatechange = function(){
+// 			if(xhr.readyState==4 && xhr.status==200){
+
+// 				// console.log(1)
+// 				// if(xhr.responseText=='1'){
+// 				// 	alert("注册成功");
+// 				// }else{
+// 				// 	alert("注册失败");
+// 				// }
+// 				location.href="zhuce2.html";
+
+
+// 			}
+// 		}
+
+// 		xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+
+// 		//4、发送
+// 		xhr.send("vivoid="+$("#phone").value+"&vivopass=");
+		
+
+// 	}
+
+
+
+
+// window.onload = function() {
+// 		$("#bt").onclick = function() {
+// 			if($("#stuid").value == ""){
+// 				alert("请输入用户名或密码");
+// 				return;
+// 			}
+// 			// 1.创建对象
+// 			var xhr = new XMLHttpRequest();
+// 			// 2.设置参数
+// 			xhr.open("post", "regSave.php", true);
+// 			// 3.设置回掉函数
+// 			xhr.onreadystatechange = function() {
+// 				if (xhr.readyState == 4 && xhr.status == 200) {
+// 					// alert(xhr.responseText);
+// 					// alert(xhr.readyState);
+// 					console.log(1)
+// 					if (xhr.responseText == "1") {
+// 						alert("注册成功");
+// 						// location.href = "login.html";
+// 					} else {
+// 						alert("注册失败");
+// 					}
+
+// 				}
+// 			}
+// 			xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+// 			// 4.发送
+// 			xhr.send("stuid=" + $("#stuid").value + "&stupass=" + $("#stupass").value);
+// 		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+// $("#lis_two").onclick=function(){
+// 			console.log("1");
+// 			if($(".menu_con_two")[0].style.display==="block"){
+// 				$(".menu_con_two")[0].style.display = "none"
+// 			}else{
+// 				$(".menu_con_two")[0].style.display = "block"
+// 			}
+// 		}
+
+</script>
+

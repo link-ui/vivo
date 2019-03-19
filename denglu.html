@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>登录</title>
+<link rel="stylesheet" type="text/css" href="css/denglu.css">
+</head>
+<body>
+	<header>
+		<div class="datu">
+			<img src="img/img21.jpg" alt="">
+			<div class="logo">
+				<a href=""><img src="img/logo1.png" alt=""></a>
+			</div>
+			<div class="innerBox">
+				<div class="logoArea">
+					<img src="img/logo3.png.webp" alt="">
+				</div>
+				<div class="title">
+					帐号登录
+				</div>
+				<div class="input-area">
+					<div class="phone-box">
+						<div class="phone-code">							
+							<span class="sp1">+86</span>
+							<img src="img/arrow2.png" alt="">
+							<div class="countrylistbox">
+								<ul id="uul">
+									<li class="li11"><span>中国</span><span>+86</span></li>
+									<li class="li22"><span>India</span><span>+91</span></li>
+								</ul>
+							</div>	
+						</div>
+						<input type="text" placeholder="请输入手机号" id="phone" class="input">
+					</div>
+					<div class="email-box">
+						<input type="text" placeholder="请输入邮箱/用户名" class="inputtwo">
+					</div>
+					<div class="pwd-box">
+						<input type="password" placeholder="请输入密码" id="password">
+						<div class="eye-box">
+							<img class="eye1" src="img/eye1.png" alt="">
+							<img class="eye2" src="img/eye2.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="check-box">
+					<div class="toggle">邮箱/用户名登录</div>
+					<div class="toggletwo">手机号登陆</div>
+					<div class="auto-login">
+						<div class="check"><img id="dimg" src="img/dimg.png" alt=""></div>
+						<span>两周内自动登录</span>
+					</div>
+				</div>
+				<div class="logo-button">登录</div>
+				<div class="register-button">注册vivo帐号</div>
+				<div class="forget-pwd">忘记密码？</div>
+				<div class="other-way-login"></div>
+			</div>
+		</div>
+	</header>
+	<div class="foot">
+		<div class="service">
+			<a href="" class="footone"><img src="img/yuyin.png" alt=""><span>在线客服</span></a>
+			<a href="" class="foottwo"><img src="img/dianhua.png.webp" alt=""><span>400-678-9688(24小时全国服务热线)</span></a>
+		</div>
+		<div class="copyright">    COPYRIGHT ©2011-2018 广东步步高电子工业有限公司 版权所有 保留一切权利 | 隐私政策 | 法律声明 | 粤B2-20080267 | 粤ICP备05100288号
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/cookieTools.js"></script>
+<script type="text/javascript">
+	
+function $(str){   //id  class tagname
+	if(str.charAt(0) == "#"){
+		return document.getElementById(str.substring(1));
+	}else if(str.charAt(0) == "."){
+		return document.getElementsByClassName(str.substring(1));
+	}else{
+		return document.getElementsByTagName(str);
+	}
+}
+
+window.onload = function(){
+
+	$(".phone-code")[0].onclick = function(){
+		if($(".countrylistbox")[0].style.display == "block"){
+			console.log(1);
+			$(".countrylistbox")[0].style.display = "none";
+		}else{
+			console.log(3);
+			$(".countrylistbox")[0].style.display = "block";
+		}
+
+
+
+	var uls = $('#uul').children;
+		for(let i = 0; i < uls.length; i++) {
+			uls[i].onclick = function(){
+				$('.sp1')[0].innerHTML = (this.lastChild).innerHTML;
+				// console.log(5);
+				// $('.countrylistbox')[0].style.display = 'none';
+			}
+		}	
+	}
+
+
+
+
+	$(".toggle")[0].onclick = function(){
+		console.log(1);
+		$(".toggle")[0].style.display = "none";
+		$(".toggletwo")[0].style.display = "block";
+
+		$(".phone-box")[0].style.display = "none";
+		$(".email-box")[0].style.display = "block";
+
+	}
+
+
+	$(".toggletwo")[0].onclick = function(){
+		$(".toggletwo")[0].style.display = "none";
+		$(".toggle")[0].style.display = "block";
+
+		$(".phone-box")[0].style.display = "block";
+		$(".email-box")[0].style.display = "none";
+	}
+
+
+	$(".eye1")[0].onclick = function(){
+		$(".eye1")[0].style.display = "none";
+		$(".eye2")[0].style.display = "block";
+
+		$("#password").type= "text";
+		
+	}
+	$(".eye2")[0].onclick = function(){
+		$(".eye2")[0].style.display = "none";
+		$(".eye1")[0].style.display = "block";
+
+		$("#password").type= "password";
+	}
+
+
+	
+
+
+// if($(".countrylistbox")[0].style.display = "block"){
+// 			$(".countrylistbox")[0].style.display = "none";
+// 		}else{
+// 			$(".countrylistbox")[0].style.display = "block";
+// 		}	
+
+
+
+
+
+
+
+
+
+
+
+
+	$(".register-button")[0].onclick = function(){
+		location.href ="zhuce.html";
+	}
+
+
+
+	$(".logo-button")[0].onclick = function(){
+
+		let xhr = new XMLHttpRequest();
+		
+		//2、设置请求参数
+		xhr.open('post','loginCheckajax.php',true);
+
+		//3、设置回调函数
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState==4 && xhr.status==200){
+				//$("#spanId").innerHTML = xhr.responseText;
+				if(xhr.responseText == '1'){
+					// 1.存cookie
+					saveCookie("username",$("#phone").value,7);
+					// 2.首页
+					location.href = "vivo.html";
+				}else{
+					alert("登录失败！");
+				}
+			}
+		}
+
+		xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+
+		//4、发送
+		xhr.send("vivoid="+$("#phone").value+"&vivopass="+$("#password").value);
+	}
+}
+</script>

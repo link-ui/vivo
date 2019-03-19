@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>商品详情</title>
+<link rel="stylesheet" type="text/css" href="css/shopinfo.css">
+</head>
+<body>
+	<header>
+		<div class="head">
+			<ul class="nav">
+				<li id="lione"><a href="">NEX系列</a></li>
+				<li><a href="">X系列</a></li>
+				<li><a href="">Z系列</a></li>
+				<li><a href="">Y系列</a></li>
+				<li><a href="">商城</a></li>
+				<li><a href="">品牌</a></li>
+				<li><a href="">体验店</a></li>
+				<li><a href="">Funtouch OS</a></li>
+				<li><a href="">服务</a></li>
+				<li><a href="">社区</a></li>
+			</ul>
+		</div>
+	</header>
+	<div class="wrapper"></div>
+	<div class="prod">
+		<!-- <div class="prodleft">
+			<img class="img1" src="img/shop46.png" alt="">
+		</div>
+		<div class="prodright">
+			<h1>X23全面屏 8GB+128GB 幻夜蓝</h1>
+			<div class="prod-summary">
+				<div class="price">
+					<span class="now-price">¥3198</span>
+					<span class="origin-price"></span>
+				</div>
+			</div>
+			<button class="button1">加入购物车</button>
+			<button class="button2">立即购买</button>
+		</div> -->
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="js/cookieTools.js"></script>
+
+<script type="text/javascript">
+$(function(){
+		$.ajax({ 
+			url: "getGoodsList.php", 
+			type:"get",
+			dataType:"json",
+			async:true,
+			date:{},
+			success: function(data){
+			    console.log("------success------")
+			    console.log(data)
+			    let goodsId = getCookie("Id");
+			    for(let i=0;i<data.length;i++){
+			    	if(data[i].goodsId == goodsId){
+			    		console.log(data[i].goodsId)
+			    		let str ="\
+			    		<div class='prodleft'>\
+							<img class='img1' src='"+data[i].goodsImg+"'>\
+						</div>\
+						<div class='prodright'>\
+							<h1>"+data[i].goodsName+"</h1>\
+							<div class='prod-summary'>\
+								<div class='price'>\
+									<span class='now-price'>¥"+data[i].goodsPrice+"</span>\
+									<span class='origin-price'></span>\
+								</div>\
+							</div>\
+							<button class='button1'>加入购物车</button>\
+							<button class='button2'>立即购买</button>\
+						</div>"
+						$(".prod").append(str);
+			    	}	
+			    } 
+			},
+			error: function(data){
+			    console.log("------error------")
+			    console.log(data)
+			}
+		});
+
+	})	
+	
+
+
+$(function(){
+		$.ajax({ 
+			url: "getGoodsList2.php", 
+			type:"get",
+			dataType:"json",
+			async:true,
+			date:{},
+			success: function(data){
+			    console.log("------success------")
+			    console.log(data)
+			    let goodsId = getCookie("Id");
+			    for(let i=0;i<data.length;i++){
+			    	if(data[i].goodsId == goodsId){
+			    		console.log(data[i].goodsId)
+			    		let str ="\
+			    		<div class='prodleft'>\
+							<img class='img1' src='"+data[i].goodsImg+"'>\
+						</div>\
+						<div class='prodright'>\
+							<h1>"+data[i].goodsName+"</h1>\
+							<div class='prod-summary'>\
+								<div class='price'>\
+									<span class='now-price'>¥"+data[i].goodsPrice+"</span>\
+									<span class='origin-price'></span>\
+								</div>\
+							</div>\
+							<button class='button1'>加入购物车</button>\
+							<button class='button2'>立即购买</button>\
+						</div>"
+						$(".prod").append(str);
+			    	}	
+			    } 
+			},
+			error: function(data){
+			    console.log("------error------")
+			    console.log(data)
+			}
+		});
+
+	})	
+
+
+</script>
